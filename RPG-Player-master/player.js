@@ -38,7 +38,7 @@ let physical = {
     let bonus = 0.5*this.stats.atk*Math.random();
     return baseDamage+bonus;
 
-  }
+  },
       charge:function(){
         let pain = Math.random();
         if(pain < 0.50){
@@ -49,6 +49,11 @@ let physical = {
           //no self damage
           return this.stats.atk+bonus;
         }
+  },
+  gohun: function(){
+    let baseDamage = this.stats.atk;
+    let bonus = 0.5*this.stats.atk*Math.random();
+    return baseDamage+bonus;
   }
 }
 
@@ -71,10 +76,9 @@ let magic = {
         return 4*pump;
       }
     }
-  }
+  },
+
 }
-
-
 
 
 
